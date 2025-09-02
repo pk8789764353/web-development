@@ -1,0 +1,21 @@
+<%layout("boilerplate")-%>
+
+    <body>
+        <h3>Add new place</h3>
+        <form action="/listings" method="post">
+            <input type="text" name="listings[title]"
+                placeholder="Enter the title"><br><br>
+            <textarea name="listings[description]"
+                placeholder="Enter description for the place"></textarea>
+                <br><br>
+                 <input type="text" name="listings[image]" placeholder="Enter the image url">
+            <br><br>
+            <input type="number" name="listings[price]" placeholder="Enter the price">
+            <br><br>
+            <input type="text" name="listings[location]" placeholder="Enter the location">
+            <br><br>
+            <input type="text" name="listings[country]" placeholder="Enter the country"><br><br>
+            <button>Submit</button>
+        </form>
+
+    </body>

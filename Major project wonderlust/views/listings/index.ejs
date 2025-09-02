@@ -1,0 +1,14 @@
+<%layout("boilerplate")-%>
+<body>
+    <h3>All listings</h3>
+    <!-- <form action="/listings/new" method="get">
+        <button>Add new</button>
+    </form> -->
+    <ul>
+       <% for(let a of newListing){%>
+            <a href="/listings/<%=a.id%>"><li><%=a.title%></li></a> 
+            <a href="/listings/<%=a.id%>"><li><%=a.title%></li></a> 
+           
+       <% }%>
+    </ul>
+</body>
