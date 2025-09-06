@@ -1,14 +1,26 @@
 <%layout("boilerplate")-%>
-<body>
-    <h3>All listings</h3>
-    <!-- <form action="/listings/new" method="get">
-        <button>Add new</button>
-    </form> -->
-    <ul>
-       <% for(let a of newListing){%>
-            <a href="/listings/<%=a.id%>"><li><%=a.title%></li></a> 
-            <a href="/listings/<%=a.id%>"><li><%=a.title%></li></a> 
-           
-       <% }%>
-    </ul>
-</body>
+
+    <body>
+        <h3>All listings</h3>
+
+        <div class="row row-cols-lg-3 row-cols-md-3 row-cols-sm-1">
+            <% for(let a of newListing){%>
+                <a href="/listings/<%=a.id%>" class="listing-link">
+                    <div class="card col">
+                        <img src="<%=a.image.url%>" class="card-img-top" alt="Listing-Image" style="height: 20rem;">
+                        <div class="card-img-overlay"></div>
+                        <div class="card-body">
+                            <b><p class="card-text">
+                            <%=a.title%></b>
+                            <br> ₹
+                            <%=a.price.toLocaleString("en-IN")%>/Night
+                                </p>
+
+                        </div>
+                    </div>
+                </a>
+                <% }%>
+        </div>
+
+
+    </body>
