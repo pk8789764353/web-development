@@ -84,7 +84,7 @@ app.post("/listings", validateListing, wrapAsync(async (req, res, next) => {
 }));
 
 app.get("/test", (req, res)=>{
-    res.send("test rout")
+    res.send("update test rout")
 })
 //edit route
 app.get("/listings/:id/edit",wrapAsync(async (req, res) => {
