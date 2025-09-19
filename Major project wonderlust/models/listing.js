@@ -18,6 +18,7 @@ const listingSchema = new Schema({
     default: "https://unsplash.com/photos/double-rainbow-over-desert-buttes-at-sunset-Ngj2u4PHjBY"
   }
 },
+
   price: Number,
   location: String,
   country: String,
@@ -27,6 +28,10 @@ const listingSchema = new Schema({
       ref:"Review",
     },
   ],
+  owner:{
+    type:Schema.Types.ObjectId,
+    ref:"User",
+  },
 });
 
 listingSchema.post("findOneAndDelte",async(listing)=>{

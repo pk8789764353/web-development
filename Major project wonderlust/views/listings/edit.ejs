@@ -16,13 +16,14 @@
 
                 <div class="mb-3">
                     Original Listing Image <br>
+                    <%=console.log(listing.image)%>
                     <img src="<%= listing.image.url %>">
                 </div>
 
                 <div class="mb-3">
 
                     <label for="image" class="form-label">Upload New Image</label>
-                    <input name="listing[image][url]" required type="text" class="form-control" value="<%= listing.image.url %>">
+                    <input name="listing[image][url]"  type="text" required class="form-control" value="<%= listing.image.url %>">
 
                 </div>
                 <div class="row">
